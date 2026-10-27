@@ -1,0 +1,38 @@
+{
+  "name": "javis",
+  "private": true,
+  "version": "0.1.0",
+  "description": "javis：微信小程序 + 运营后台 + Node 后端",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "javis": "tsx packages/cli/src/main.ts",
+    "serve": "tsx packages/cli/src/main.ts serve",
+    "db:migrate": "tsx packages/cli/src/main.ts db migrate",
+    "db:status": "tsx packages/cli/src/main.ts db status",
+    "web:dev": "pnpm --filter @javis/web dev",
+    "web:build": "pnpm --filter @javis/web build",
+    "admin": "pnpm run web:build && pnpm run serve",
+    "check-secrets": "bash scripts/check-secrets.sh",
+    "deploy:skylab": "bash scripts/deploy-skylab.sh",
+    "miniapp:build": "pnpm --filter @javis/miniapp build:weapp",
+    "miniapp:dev": "pnpm --filter @javis/miniapp dev:weapp",
+    "miniapp:preview": "pnpm --filter @javis/miniapp dev:h5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "webpack": "5.89.0"
+    }
+  }
+}

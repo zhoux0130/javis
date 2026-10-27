@@ -1,0 +1,38 @@
+{
+  "description": "javis",
+  "projectname": "javis",
+  "miniprogramRoot": "dist/",
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "setting": {
+    "es6": false,
+    "minified": true,
+    "urlCheck": true,
+    "minifyWXML": true,
+    "postcss": false,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "enhance": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "simulatorPluginLibVersion": {},
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {}
+}

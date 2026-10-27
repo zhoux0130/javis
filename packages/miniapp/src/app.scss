@@ -1,0 +1,40 @@
+$ink: #252422;
+$purple: #6653f4;
+page,
+body {
+  margin: 0;
+  background: #f4f2f1;
+  color: $ink;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue",
+    sans-serif;
+}
+textarea {
+  resize: none;
+}
+view,
+text,
+input,
+textarea,
+button {
+  box-sizing: border-box;
+}
+button {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  border-radius: 0;
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+button::after {
+  border: 0;
+}
+button[disabled]:not([disabled="false"]) {
+  opacity: 0.4;
+  color: inherit;
+  background: inherit;
+}

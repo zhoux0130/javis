@@ -1,0 +1,17 @@
+# 运行期数据由 volume 挂载，不进镜像
+data/
+# 密钥由 env_file 注入，不进镜像
+.env*
+# 本地构建产物 / 缓存
+node_modules/
+**/node_modules/
+**/dist/
+**/dist-h5/
+**/.swc/
+**/project.private.config.json
+*.tsbuildinfo
+# 仓库杂项
+.git/
+test-results/
+*.log
+.DS_Store

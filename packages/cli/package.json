@@ -1,0 +1,16 @@
+{
+  "name": "@javis/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "javis": "src/main.ts"
+  },
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@javis/core": "workspace:*"
+  }
+}

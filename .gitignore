@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+# 运行期数据（服务器上由 volume 挂载）
+/data/*
+!/data/.gitkeep
+.DS_Store
+*.log
+test-results/
+
+# 小程序本地配置与 H5 产物
+packages/miniapp/project.private.config.json
+packages/miniapp/dist-h5/
+packages/miniapp/.swc/

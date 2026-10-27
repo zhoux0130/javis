@@ -1,0 +1,16 @@
+# 部署到 skylab machine i（49.0.200.80，Caddy 自动 HTTPS）。
+# t1–t20 测试域名已在 Caddy 预接：t{N}.upivot.io → 90{NN}。javis 用 t10 → 9010。
+services:
+  javis:
+    build: .
+    image: javis:latest
+    container_name: javis
+    restart: unless-stopped
+    env_file: .env # DATABASE_URL(javis_prod) / JAVIS_AUTH_TOKEN / OSS / 微信
+    environment:
+      JAVIS_PORT: "5173"
+      JAVIS_DATA_DIR: /app/data # 覆盖 .env 里的 ./data，固定到挂载点
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "172.17.0.1:${EPORT:-9010}:5173" # 只对 docker 网桥开放；Caddy 经 172.17.0.1:${EPORT} 反代
